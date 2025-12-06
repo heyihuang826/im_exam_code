@@ -1,0 +1,8 @@
+/*.cpp
+/*.class
+*.exe
+/*py
+/*.java
+temp*
+*.ipynb
+note.md
