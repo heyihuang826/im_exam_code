@@ -21,9 +21,9 @@ int Queue::length() {
     // 空佇列
     if (backPtr == NULL) return 0;
     int count = 0;
-    QueueNode* p = backPtr; // front node
+    QueueNode* p = backPtr; // backPtr
 
-    // 環狀串列：從 front 開始數，直到回到 front
+    // 環狀串列：從 backPtr 開始數，直到回到 backPtr
     do {
         count++;
         p = p->next;
