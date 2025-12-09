@@ -76,21 +76,21 @@ void Queue::enqueue(int x) {
 
 void Queue::reverse() {
     // 空或只有一個節點：無需反轉
-    if (backPtr == NULL || backPtr->next == backPtr)
-        return;
+    if (backPtr == NULL) return;
+    if (backPtr->next == backPtr) return;
 
     QueueNode* front = backPtr->next;  // 起點
-    QueueNode* prev = backPtr;         // 一開始 prev 指向 back
-    QueueNode* curr = front;           // 從 front 開始
-    QueueNode* next = NULL;
+    QueueNode* p = backPtr;         // 一開始 p 指向 back
+    QueueNode* q = front;           // 從 front 開始
+    QueueNode* r = NULL;
 
     // 反轉整個環，直到回到 front
     do {
-        next = curr->next;
-        curr->next = prev;  // reverse
-        prev = curr;
-        curr = next;
-    } while (curr != front);
+        r = q->next;
+        q->next = p;  // reverse
+        p = q;
+        q = r;
+    } while (q != front);
 
     // 最終調整 backPtr：
     // 原本 front → 變成新的 back
