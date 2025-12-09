@@ -43,8 +43,8 @@ int Queue::dequeue() {
 
     // 情況 1：只有一個節點
     if (front == backPtr) {
-        delete front;
         backPtr = NULL; // queue 變空
+        delete front;
     }
     // 情況 2：多個節點
     else {
