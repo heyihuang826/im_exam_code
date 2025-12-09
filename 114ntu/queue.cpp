@@ -19,17 +19,15 @@ private:
 
 int Queue::length() {
     // 空佇列
-    if (backPtr == NULL)
-        return 0;
-
-    int count = 1;
-    QueueNode* current = backPtr->next; // front node
+    if (backPtr == NULL) return 0;
+    int count = 0;
+    QueueNode* p = backPtr; // front node
 
     // 環狀串列：從 front 開始數，直到回到 front
-    while (current != backPtr) {
-        current = current->next;
+    do {
         count++;
-    }
+        p = p->next;
+    } while (p != backPtr); 
 
     return count;
 }
