@@ -5,5 +5,5 @@
 - 歡迎開issue討論
 
 ## 快速檢視
-[114台大資管](114ntu/DESCRIBE.md)
-[113台大資管](113ntu/DESCRIBE.md)
+- [114台大資管](114ntu/DESCRIBE.md)
+- [113台大資管](113ntu/DESCRIBE.md)
